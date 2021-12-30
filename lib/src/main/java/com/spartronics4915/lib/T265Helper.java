@@ -37,6 +37,9 @@ public class T265Helper {
         if (slamera == null) {
             slamera = new T265Camera(odometryInfo, relocMapPath, appContext);
         }
+        if (!slamera.isStarted()) {
+            slamera.start();
+        }
         return slamera;
     }
 
